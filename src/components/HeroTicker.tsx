@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 
 const slides = [
   { id: 1, text: 'Connected to Perth', duration: 3500 },
-  { id: 2, text: 'Connected to Your Goals', duration: 3500 },
-  { id: 3, text: 'Connected to Your Business', duration: 3500 },
+  { id: 2, text: 'Connected to Community', duration: 3500 },
+  { id: 2, text: 'Connected to Your Business', duration: 3500 },
   { id: 3, text: 'Connected to You', duration: 3500 },
 ];
 
