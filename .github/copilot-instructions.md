@@ -21,6 +21,7 @@ This is the public marketing website for Connected Systems. The site serves two 
 
 ### Content Strategy
 - **Tone:** Approachable/modern, business-focused (not overly technical)
+- **Language:** Australian English spelling and terminology (specialise, recognise, optimise, colour, etc.)
 - **Primary Page:** Single long-form home page with all key information
 - **Separate Pages:** Individual product pages, privacy policy/terms & conditions, future documentation area
 - **Contact:** Form submission (implementation TBD - design form but defer submission handling)
@@ -28,6 +29,9 @@ This is the public marketing website for Connected Systems. The site serves two 
 
 ### Brand Identity
 - **Logo:** `/public/logo-clean.svg` (icon without text)
+- **Typography:** Poppins (primary font) - rounded, elegant, professional
+  - Poppins provides soft, rounded letterforms with equal stroke spacing
+  - Conveys elegance and respect while maintaining approachability
 - **Primary Colors:** 
   - Light Blue: `#00b4ec`
   - Dark Blue: `#1f73b8`

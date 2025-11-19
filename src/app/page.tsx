@@ -103,16 +103,16 @@ export default function Home()
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Our Specializations
+              Our Specialisations
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-400">
               Expertise across the Microsoft enterprise technology stack
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Service 1 */}
+            {/* Service 1 - Microsoft 365 & SharePoint (Blue) */}
             <div className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl transition-all hover:scale-105">
-              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-primary-light to-primary-dark flex items-center justify-center">
+              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                 </svg>
@@ -125,9 +125,9 @@ export default function Home()
               </p>
             </div>
 
-            {/* Service 2 */}
+            {/* Service 2 - Azure Integration (Sky Blue) */}
             <div className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl transition-all hover:scale-105">
-              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-primary-light to-primary-dark flex items-center justify-center">
+              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center">
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                 </svg>
@@ -140,9 +140,9 @@ export default function Home()
               </p>
             </div>
 
-            {/* Service 3 */}
+            {/* Service 3 - .NET Development (Purple) */}
             <div className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl transition-all hover:scale-105">
-              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-primary-light to-primary-dark flex items-center justify-center">
+              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
@@ -155,9 +155,9 @@ export default function Home()
               </p>
             </div>
 
-            {/* Service 4 */}
+            {/* Service 4 - Legacy Integration (Orange) */}
             <div className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-sm hover:shadow-xl transition-all hover:scale-105">
-              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-primary-light to-primary-dark flex items-center justify-center">
+              <div className="mb-4 h-12 w-12 rounded-lg bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
@@ -166,7 +166,7 @@ export default function Home()
                 Legacy Integration
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                BizTalk and legacy system integration, modernization, and migration strategies.
+                BizTalk and legacy system integration, modernisation, and migration strategies.
               </p>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function Home()
                 enterprise technologies to organizations across Australia and internationally.
               </p>
               <p className="mt-6 text-base leading-7 text-slate-600 dark:text-slate-400">
-                We specialize in delivering bespoke software solutions for enterprise-grade systems,
+                We specialise in delivering bespoke software solutions for enterprise-grade systems,
                 combining technical excellence with a practical, business-focused approach. Our team
                 understands the complexities of modern IT environments and works closely with clients
                 to deliver solutions that drive real business value.
