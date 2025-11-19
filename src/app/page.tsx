@@ -1,5 +1,5 @@
+import Image from "next/image";
 import HeroTicker from "@/components/HeroTicker";
-import { getAssetPath } from "@/lib/utils";
 
 export default function Home()
 {
@@ -20,11 +20,12 @@ export default function Home()
             <div className="mb-8 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary-dark opacity-20 blur-xl"></div>
-                <img
-                  src={getAssetPath("/logo-clean.svg")}
+                <Image
+                  src="/logo-clean.svg"
                   alt="Connected Systems"
                   width={140}
                   height={140}
+                  priority
                   className="relative drop-shadow-2xl"
                 />
               </div>
@@ -244,17 +245,19 @@ export default function Home()
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 sm:py-32 bg-slate-800 dark:bg-slate-950 text-slate-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Get Connected
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-slate-400">
-              Let&rsquo;s discuss how we can help your organisation
-            </p>
-          </div>
+      {/* Contact & Footer Wrapper */}
+      <div className="min-h-screen flex flex-col">
+        {/* Contact Section */}
+        <section id="contact" className="flex-1 flex items-center justify-center bg-slate-800 dark:bg-slate-950 text-slate-50">
+          <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Get Connected
+              </h2>
+              <p className="mt-4 text-lg leading-8 text-slate-400">
+                Let&rsquo;s discuss how we can help your organisation
+              </p>
+            </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:grid-cols-1 justify-center">
 
             {/* Contact Form */}
@@ -318,35 +321,36 @@ export default function Home()
             </div>
 
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-800 bg-slate-900 dark:bg-slate-950">
-        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <div className="flex items-center gap-3">
-              <img
-                src={getAssetPath("/logo-clean.svg")}
-                alt="Connected Systems"
-                width={32}
-                height={32}
-              />
-              <p className="text-sm text-slate-400">
-                © {new Date().getFullYear()} Connected Systems Group. All rights reserved.
-              </p>
-            </div>
-            <div className="flex gap-6">
-              <a href="#" className="text-sm text-slate-400 hover:text-primary-light transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-sm text-slate-400 hover:text-primary-light transition-colors">
-                Terms & Conditions
-              </a>
+        {/* Footer */}
+        <footer className="border-t border-slate-800 bg-slate-900 dark:bg-slate-950">
+          <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/logo-clean.svg"
+                  alt="Connected Systems"
+                  width={32}
+                  height={32}
+                />
+                <p className="text-sm text-slate-400">
+                  © {new Date().getFullYear()} Connected Systems Group. All rights reserved.
+                </p>
+              </div>
+              <div className="flex gap-6">
+                <a href="#" className="text-sm text-slate-400 hover:text-primary-light transition-colors">
+                  Privacy Policy
+                </a>
+                <a href="#" className="text-sm text-slate-400 hover:text-primary-light transition-colors">
+                  Terms & Conditions
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }

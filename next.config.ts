@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: basePath,
+  assetPrefix: basePath,
   images: {
     unoptimized: true,
   },
