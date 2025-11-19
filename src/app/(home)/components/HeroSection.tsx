@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroTicker from "@/components/HeroTicker";
+import HeroTicker from "@/app/(home)/components/HeroTicker";
 
 export default function HeroSection() {
   return (

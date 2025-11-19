@@ -1,15 +1,19 @@
-export default function AboutSection() {
+export default function AboutSection()
+{
   return (
-    <section id="about" className="bg-slate-50 dark:bg-slate-900 py-24 sm:py-32">
+    <section id="about" className="bg-slate-50 dark:bg-slate-900 pt-12 sm:pt-16 pb-24 sm:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-12 sm:mb-16">
+            About Connected
+          </h2>
+        </div>
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              About Connected
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
+
+            <p className="-mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
               Based in Perth, Western Australia, Connected brings deep expertise in Microsoft
-              enterprise technologies to organizations across Australia and internationally.
+              technologies to organisations across Australia and internationally.
             </p>
             <p className="mt-6 text-base leading-7 text-slate-600 dark:text-slate-400">
               We specialise in delivering bespoke software solutions for enterprise-grade systems,
@@ -41,7 +45,7 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-lg font-semibold text-foreground">Microsoft Expertise</h3>
                 <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                  Deep knowledge of the Microsoft technology stack from Office 365 to Azure and beyond.
+                  Deep knowledge of the Microsoft technology stack from the 365 cloud to VB5.
                 </p>
               </div>
             </div>
