@@ -21,7 +21,7 @@ export default function Home()
               <div className="relative">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary-dark opacity-20 blur-xl"></div>
                 <Image
-                  src="/logo-clean.svg"
+                  src="logo-clean.svg"
                   alt="Connected Systems"
                   width={140}
                   height={140}
@@ -330,7 +330,7 @@ export default function Home()
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/logo-clean.svg"
+                  src="logo-clean.svg"
                   alt="Connected Systems"
                   width={32}
                   height={32}
