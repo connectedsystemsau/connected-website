@@ -1,6 +1,14 @@
 import Link from "next/link";
-import Header from "./components/Header";
+import Header from "../../components/Header";
 import Footer from "@/components/Footer";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "logo-clean.svg",
+    apple: "logo-clean.svg",
+  },
+};
 
 export default function GeneralLayout({
   children,

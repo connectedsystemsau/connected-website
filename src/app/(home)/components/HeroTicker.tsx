@@ -93,11 +93,11 @@ export default function HeroTicker()
         aria-live="polite"
         aria-atomic="true"
       >
-        <span className="text-2xl sm:text-4xl lg:text-5xl font-semibold inline-block bg-linear-to-r from-brand-200 via-brand-400 to-brand-300 bg-clip-text text-transparent min-h-[1.2em] leading-tight">
+        <span className="text-2xl sm:text-4xl lg:text-5xl font-semibold inline-block bg-linear-to-r from-brand-300 via-brand-200 to-brand-300 bg-clip-text text-transparent min-h-[1.2em] leading-tight">
           {displayedText}
-          {phraseIndex !== phrases.length - 1 && (isFlashing || displayedText !== phrases[phraseIndex]) && (
+          {(phraseIndex !== phrases.length - 1 || displayedText !== phrases[phraseIndex]) && (isFlashing || displayedText !== phrases[phraseIndex]) && (
             <span
-              className={`inline-block w-[0.5em] h-[0.15em] ml-1 mb-[-0.2em] bg-linear-to-r from-brand-200 to-brand-400 transition-opacity duration-100 ${showCursor ? 'opacity-100' : 'opacity-0'
+              className={`inline-block w-[0.5em] h-[0.15em] ml-1 mb-[-0.2em] bg-brand-200 transition-opacity duration-100 ${showCursor ? 'opacity-80' : 'opacity-0'
                 }`}
             />
           )}
