@@ -1,5 +1,5 @@
-import Image from "next/image";
 import HeroTicker from "@/components/HeroTicker";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Home()
 {
@@ -20,12 +20,11 @@ export default function Home()
             <div className="mb-8 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary-dark opacity-20 blur-xl"></div>
-                <Image
-                  src="/logo-clean.svg"
+                <img
+                  src={getAssetPath("/logo-clean.svg")}
                   alt="Connected Systems"
                   width={140}
                   height={140}
-                  priority
                   className="relative drop-shadow-2xl"
                 />
               </div>
@@ -327,8 +326,8 @@ export default function Home()
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <div className="flex items-center gap-3">
-              <Image
-                src="/logo-clean.svg"
+              <img
+                src={getAssetPath("/logo-clean.svg")}
                 alt="Connected Systems"
                 width={32}
                 height={32}
