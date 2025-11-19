@@ -33,7 +33,9 @@ jobs:
       - name: Build with Next.js
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ github.event.repository.name != github.event.repository.owner.login && format('/{0}', github.event.repository.name) || '' }}
+          # Set base path only for GitHub Pages subdirectory (username.github.io/repo-name)
+          # Leave empty for custom domains - set repository variable USE_CUSTOM_DOMAIN=true
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.USE_CUSTOM_DOMAIN == 'true' && '' || '/connected-website' }}
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
