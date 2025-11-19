@@ -3,12 +3,18 @@ import HeroTicker from "@/components/HeroTicker";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-800">
-      {/* Animated background elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-brand-800 via-brand-700 to-brand-800">
+      {/* Animated background elements with better blending */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-400/20 blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-brand-300/20 blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-brand-500/15 blur-3xl"></div>
+        {/* Primary animated orbs */}
+        <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-linear-to-br from-brand-400/10 to-brand-500/8 blur-3xl animate-wiggle-1"></div>
+        <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-linear-to-br from-brand-300/10 to-brand-400/8 blur-3xl animate-wiggle-2"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-linear-to-r from-brand-500/15 to-brand-600/11 blur-3xl animate-wiggle-3"></div>
+        <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 h-[300px] w-[700px] rounded-full bg-linear-to-t from-brand-400/25 to-brand-500/15 blur-3xl animate-wiggle-1"></div>
+        
+        {/* Additional blending orbs for smoother transitions */}
+        <div className="absolute top-1/4 right-1/4 h-[400px] w-[400px] rounded-full bg-brand-600/10 blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 h-[400px] w-[400px] rounded-full bg-brand-500/10 blur-3xl"></div>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
@@ -16,7 +22,7 @@ export default function HeroSection() {
           {/* Logo with enhanced styling */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary-dark opacity-20 blur-xl"></div>
+              <div className="absolute inset-0 rounded-full bg-linear-to-r from-primary-light to-primary-dark opacity-20 blur-xl"></div>
               <Image
                 src="logo-clean.svg"
                 alt="Connected Systems"
