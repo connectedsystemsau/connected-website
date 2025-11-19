@@ -1,17 +1,19 @@
 import Image from "next/image";
+import HeroTicker from "@/components/HeroTicker";
 
-export default function Home() {
+export default function Home()
+{
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-800 dark:from-brand-800 dark:via-brand-600 dark:to-brand-700">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-800">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-400/20 dark:bg-brand-300/30 blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-brand-300/20 dark:bg-brand-400/30 blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-brand-500/15 dark:bg-brand-400/20 blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-400/20 blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-brand-300/20 blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-brand-500/15 blur-3xl"></div>
         </div>
-        
+
         <div className="relative mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             {/* Logo with enhanced styling */}
@@ -28,8 +30,9 @@ export default function Home() {
                 />
               </div>
             </div>
-            
+
             {/* Badge */}
+            {/*
             <div className="mb-6 flex justify-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md px-4 py-2 text-sm font-medium text-slate-900 dark:text-slate-100 shadow-xl ring-1 ring-white/20 dark:ring-slate-700">
                 <span className="relative flex h-2 w-2">
@@ -38,24 +41,16 @@ export default function Home() {
                 </span>
                 Perth-based Microsoft Specialists
               </div>
-            </div>
+            </div> */}
 
-            {/* Main headline */}
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
-              Enterprise Solutions
-              <br />
-              <span className="relative">
-                <span className="bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent animate-gradient">
-                  Built Right
-                </span>
-              </span>
-            </h1>
-            
-            <p className="mt-8 text-xl leading-8 text-blue-50 dark:text-slate-200 max-w-2xl mx-auto drop-shadow-md">
-              Delivering bespoke Microsoft 365, SharePoint, Azure, and enterprise integration solutions 
+            {/* Main headline with ticker animation */}
+            <HeroTicker />
+
+            <p className="mt-8 text-xl leading-8 text-blue-50 max-w-2xl mx-auto drop-shadow-md">
+              Delivering bespoke Microsoft 365, SharePoint, Azure, and enterprise integration solutions
               that transform how Australian businesses operate.
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -69,7 +64,7 @@ export default function Home() {
               </a>
               <a
                 href="#services"
-                className="group inline-flex items-center justify-center rounded-full bg-white/20 dark:bg-slate-800/40 backdrop-blur-md px-8 py-4 text-base font-semibold text-white shadow-lg ring-1 ring-white/30 dark:ring-slate-700 transition-all hover:bg-white/30 dark:hover:bg-slate-800/60 hover:scale-105 w-full sm:w-auto"
+                className="group inline-flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md px-8 py-4 text-base font-semibold text-white shadow-lg ring-1 ring-white/30 transition-all hover:bg-white/30 hover:scale-105 w-full sm:w-auto"
               >
                 <span>Explore Services</span>
                 <svg className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,7 +74,7 @@ export default function Home() {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-slate-200 dark:text-slate-400">
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-slate-200">
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5 text-primary-light" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -187,13 +182,13 @@ export default function Home() {
                 About Connected Systems
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
-                Based in Perth, Western Australia, Connected Systems brings deep expertise in Microsoft 
+                Based in Perth, Western Australia, Connected Systems brings deep expertise in Microsoft
                 enterprise technologies to organizations across Australia and internationally.
               </p>
               <p className="mt-6 text-base leading-7 text-slate-600 dark:text-slate-400">
-                We specialize in delivering bespoke software solutions for enterprise-grade systems, 
-                combining technical excellence with a practical, business-focused approach. Our team 
-                understands the complexities of modern IT environments and works closely with clients 
+                We specialize in delivering bespoke software solutions for enterprise-grade systems,
+                combining technical excellence with a practical, business-focused approach. Our team
+                understands the complexities of modern IT environments and works closely with clients
                 to deliver solutions that drive real business value.
               </p>
             </div>

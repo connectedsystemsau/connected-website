@@ -69,6 +69,24 @@ body {
   }
 }
 
+@keyframes blinds-in {
+  0% {
+    clip-path: inset(-10% 100% -10% 0);
+  }
+  100% {
+    clip-path: inset(-10% 0 -10% 0);
+  }
+}
+
+@keyframes blinds-out {
+  0% {
+    clip-path: inset(-10% 0 -10% 0);
+  }
+  100% {
+    clip-path: inset(-10% 0 -10% 100%);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
