@@ -1,5 +1,39 @@
 # Copilot Instructions for Connected Website
 
+## Company Context
+
+### About Connected Systems
+**Connected Systems** (trading as "Connected") is a software development consultancy based in Perth, Western Australia, specializing in Microsoft enterprise technologies and bespoke system development.
+
+**Core Specializations:**
+1. Microsoft 365 & SharePoint Solutions
+2. Azure Integration & Cloud Services
+3. Enterprise Application Development (.NET)
+4. Legacy System Integration (BizTalk)
+
+**Target Markets:** Australian enterprises (primary), international clients (secondary)  
+**Office Location:** 81 Edward Street, Perth WA 6000
+
+### Website Purpose & Goals
+This is the public marketing website for Connected Systems. The site serves two primary audiences:
+1. **IT Decision Makers** - Prospective clients evaluating enterprise consulting partners
+2. **Existing Clients** - Support resources and company information
+
+### Content Strategy
+- **Tone:** Approachable/modern, business-focused (not overly technical)
+- **Primary Page:** Single long-form home page with all key information
+- **Separate Pages:** Individual product pages, privacy policy/terms & conditions, future documentation area
+- **Contact:** Form submission (implementation TBD - design form but defer submission handling)
+- **SEO Focus:** Australian market, Microsoft stack keywords, enterprise consulting
+
+### Brand Identity
+- **Logo:** `/public/logo-clean.svg` (icon without text)
+- **Primary Colors:** 
+  - Light Blue: `#00b4ec`
+  - Dark Blue: `#1f73b8`
+  - Text Dark: `#29313f`
+- **Fonts:** Geist Sans (primary), Geist Mono (code/technical)
+
 ## Project Overview
 This is a Next.js 15 static website configured for static export (`output: 'export'`) with MDX support and Tailwind CSS v4. The project uses React 19 and is specifically optimized for GitHub Pages deployment, serving purely static content without any server-side functionality.
 
