@@ -4,42 +4,100 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white to-blue-50 dark:from-slate-950 dark:to-slate-900">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-800 dark:from-brand-800 dark:via-brand-600 dark:to-brand-700">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-400/20 dark:bg-brand-300/30 blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-brand-300/20 dark:bg-brand-400/30 blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-brand-500/15 dark:bg-brand-400/20 blur-3xl"></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            {/* Logo with enhanced styling */}
             <div className="mb-8 flex justify-center">
-              <Image
-                src="/logo-clean.svg"
-                alt="Connected Systems"
-                width={120}
-                height={120}
-                priority
-                className="drop-shadow-lg"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-light to-primary-dark opacity-20 blur-xl"></div>
+                <Image
+                  src="/logo-clean.svg"
+                  alt="Connected Systems"
+                  width={140}
+                  height={140}
+                  priority
+                  className="relative drop-shadow-2xl"
+                />
+              </div>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Enterprise Solutions for the{" "}
-              <span className="bg-gradient-to-r from-primary-light to-primary-dark bg-clip-text text-transparent">
-                Microsoft Stack
+            
+            {/* Badge */}
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md px-4 py-2 text-sm font-medium text-slate-900 dark:text-slate-100 shadow-xl ring-1 ring-white/20 dark:ring-slate-700">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+                </span>
+                Perth-based Microsoft Specialists
+              </div>
+            </div>
+
+            {/* Main headline */}
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl drop-shadow-lg">
+              Enterprise Solutions
+              <br />
+              <span className="relative">
+                <span className="bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent animate-gradient">
+                  Built Right
+                </span>
               </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
-              Connected Systems is a Perth-based software development consultancy specializing in 
-              Microsoft 365, SharePoint, Azure, and enterprise integration solutions.
+            
+            <p className="mt-8 text-xl leading-8 text-blue-50 dark:text-slate-200 max-w-2xl mx-auto drop-shadow-md">
+              Delivering bespoke Microsoft 365, SharePoint, Azure, and enterprise integration solutions 
+              that transform how Australian businesses operate.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            
+            {/* CTA Buttons */}
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="#contact"
-                className="rounded-full bg-gradient-to-r from-primary-light to-primary-dark px-8 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                className="group relative inline-flex items-center justify-center rounded-full bg-white hover:bg-blue-50 px-8 py-4 text-base font-semibold text-blue-600 shadow-2xl transition-all hover:scale-105 hover:shadow-white/50 w-full sm:w-auto"
               >
-                Get in touch
+                <span className="relative z-10">Start Your Project</span>
+                <svg className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
               <a
                 href="#services"
-                className="text-sm font-semibold leading-6 text-foreground hover:text-primary-dark transition-colors"
+                className="group inline-flex items-center justify-center rounded-full bg-white/20 dark:bg-slate-800/40 backdrop-blur-md px-8 py-4 text-base font-semibold text-white shadow-lg ring-1 ring-white/30 dark:ring-slate-700 transition-all hover:bg-white/30 dark:hover:bg-slate-800/60 hover:scale-105 w-full sm:w-auto"
               >
-                Learn more <span aria-hidden="true">→</span>
+                <span>Explore Services</span>
+                <svg className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-slate-200 dark:text-slate-400">
+              <div className="flex items-center gap-2">
+                <svg className="h-5 w-5 text-primary-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Microsoft Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="h-5 w-5 text-primary-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Enterprise Grade</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="h-5 w-5 text-primary-light" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Australian Owned</span>
+              </div>
             </div>
           </div>
         </div>
@@ -233,9 +291,6 @@ export default function Home() {
                 >
                   Send Message
                 </button>
-                <p className="text-xs text-slate-500 text-center">
-                  Form submission handling coming soon
-                </p>
               </div>
             </form>
 

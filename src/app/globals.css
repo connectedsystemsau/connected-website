@@ -5,6 +5,15 @@
   --foreground: var(--color-slate-800);
   --primary-light: #00b4ec;
   --primary-dark: #1f73b8;
+  --brand-900: #0a2540;
+  --brand-800: #123c5f;
+  --brand-700: #1a537e;
+  --brand-600: #1f73b8;
+  --brand-500: #2a8fd6;
+  --brand-400: #00b4ec;
+  --brand-300: #4dd4ff;
+  --brand-200: #8ae5ff;
+  --brand-100: #c7f2ff;
 }
 
 @theme inline {
@@ -12,6 +21,15 @@
   --color-foreground: var(--foreground);
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
+  --color-brand-900: var(--brand-900);
+  --color-brand-800: var(--brand-800);
+  --color-brand-700: var(--brand-700);
+  --color-brand-600: var(--brand-600);
+  --color-brand-500: var(--brand-500);
+  --color-brand-400: var(--brand-400);
+  --color-brand-300: var(--brand-300);
+  --color-brand-200: var(--brand-200);
+  --color-brand-100: var(--brand-100);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -27,4 +45,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
 }
