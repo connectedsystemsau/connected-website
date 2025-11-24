@@ -8,10 +8,9 @@ export default function AboutSection()
             About Connected
           </h2>
         </div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div>
-
-            <p className="-mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            <p className="text-lg leading-8 text-slate-600 dark:text-slate-400">
               Based in Perth, Western Australia, Connected brings deep expertise in Microsoft
               technologies to organisations across Australia and internationally.
             </p>
