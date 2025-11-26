@@ -1,3 +1,5 @@
+import ContactForm from '@/components/ContactForm';
+
 export default function ContactSection() {
   return (
     <section id="contact" className="flex-1 flex items-center justify-center bg-slate-800 dark:bg-slate-950 text-slate-50">
@@ -13,43 +15,7 @@ export default function ContactSection() {
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:grid-cols-1 justify-center">
 
           {/* Contact Form */}
-          <form className="rounded-2xl shadow-2xl border border-slate-800 bg-background text-foreground dark:bg-slate-900 p-8">
-            <div className="space-y-6">
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  className="mt-2 block w-full rounded-lg border px-4 py-2.5 border-slate-300 bg-white placeholder-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:placeholder-slate-400 focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light/20"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="mt-2 block w-full rounded-lg border px-4 py-2.5 border-slate-300 bg-white placeholder-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:placeholder-slate-400 focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light/20"
-                  placeholder="Your email"
-                />
-              </div>
-              <div>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows={4}
-                  className="mt-2 block w-full rounded-lg border px-4 py-2.5 border-slate-300 bg-white placeholder-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:placeholder-slate-400 focus:border-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light/20"
-                  placeholder="Tell us about your project..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-gradient-to-r from-primary-light to-primary-dark px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
+          <ContactForm />
 
           {/* Contact Info */}
           <div className="mx-auto">

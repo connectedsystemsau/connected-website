@@ -1,0 +1,69 @@
+name: Deploy Azure Infrastructure
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main", "master"]
+    paths:
+      - 'infra/**'
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AZURE_RESOURCE_GROUP: connected-website-rg
+  AZURE_LOCATION: australiaeast
+
+jobs:
+  deploy-infrastructure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Create Resource Group
+        run: |
+          az group create \
+            --name ${{ env.AZURE_RESOURCE_GROUP }} \
+            --location ${{ env.AZURE_LOCATION }}
+
+      - name: Deploy Bicep
+        uses: azure/arm-deploy@v2
+        with:
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
+          template: ./infra/main.bicep
+          parameters: >
+            environment=prod
+            location=${{ env.AZURE_LOCATION }}
+            hcaptchaSecret=${{ secrets.HCAPTCHA_SECRET }}
+            csrfSecret=${{ secrets.CSRF_SECRET }}
+            tenantId=${{ secrets.AZURE_TENANT_ID }}
+            clientId=${{ secrets.GRAPH_CLIENT_ID }}
+            clientSecret=${{ secrets.GRAPH_CLIENT_SECRET }}
+            recipientEmail=${{ secrets.RECIPIENT_EMAIL }}
+            senderEmail=${{ secrets.SENDER_EMAIL }}
+            corsOrigin=${{ secrets.CORS_ORIGIN }}
+          failOnStdErr: false
+
+      - name: Get Function App Name
+        id: get-function-app
+        run: |
+          FUNCTION_APP_NAME=$(az deployment group show \
+            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --name main \
+            --query properties.outputs.functionAppName.value \
+            --output tsv)
+          echo "FUNCTION_APP_NAME=$FUNCTION_APP_NAME" >> $GITHUB_OUTPUT
+          echo "Function App Name: $FUNCTION_APP_NAME"
+
+    outputs:
+      functionAppName: ${{ steps.get-function-app.outputs.FUNCTION_APP_NAME }}
