@@ -14,17 +14,17 @@ export default function Footer() {
               height={32}
             />
             <p className="text-sm text-slate-400">
-              © {new Date().getFullYear()} Connected Systems Group. All rights reserved.
+              © {new Date().getFullYear()} Connected Systems Group. All rights reserved. ABN: 68 118 875 746
             </p>
           </div>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <Link href="/privacy" className="text-sm text-slate-400 hover:text-primary-light transition-colors">
               Privacy Policy
             </Link>
             <Link href="/terms" className="text-sm text-slate-400 hover:text-primary-light transition-colors">
               Terms & Conditions
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

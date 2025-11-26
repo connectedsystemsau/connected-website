@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AZURE_STORAGE_CONNECTION_STRING": "UseDevelopmentStorage=true",
+    "HCAPTCHA_SECRET": "your-hcaptcha-secret-key",
+    "CORS_ORIGIN": "http://localhost:3000,https://connectedsystemsau.github.io",
+    "CSRF_SECRET": "your-csrf-secret-key-change-in-production",
+    "TENANT_ID": "your-tenant-id",
+    "CLIENT_ID": "your-app-registration-client-id",
+    "CLIENT_SECRET": "your-client-secret",
+    "RECIPIENT_EMAIL": "contact@connectedsys.com.au",
+    "SENDER_EMAIL": "noreply@connectedsys.com.au"
+  }
+}
